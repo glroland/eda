@@ -1,0 +1,15 @@
+- name: Read messages from a kafka topic and act on them
+  hosts: localhost 
+
+  sources:   
+    - ansible.eda.kafka:
+        host: tools.home.glroland.com
+        port: 9092
+        topic: eda
+
+  rules:
+    - name: receive event
+      condition: event.schema.type == "string"
+      action:
+        run_playbook:
+          name: eda-event.yaml
