@@ -1,11 +1,9 @@
 ---
 - name: Analyze the dnf event.payload
-  hosts: kafka.example.com
+  hosts: all
   gather_facts: false
 
   tasks:
-  - set_fact:
-      event_content: "{{ event.payload.replace('\"', '') }}"
-
   - debug:
-      msg: "{{ event_content }}"
+#      var: hostvars[inventory_hostname]
+      msg: "{{ ansible_eda.event.body }}"

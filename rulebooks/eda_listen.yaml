@@ -6,10 +6,13 @@
         host: tools.home.glroland.com
         port: 9092
         topic: eda
+        offset: earliest
 
   rules:
     - name: receive event
-      condition: event.schema.type == "string"
+      condition: event.body != ''
       action:
+#        print_event:
         run_playbook:
-          name: eda-event.yaml
+          name: eda_event.yaml
+#          verbosity: 4
