@@ -5,5 +5,5 @@
 
   tasks:
   - debug:
-#      var: hostvars[inventory_hostname]
-      msg: "{{ ansible_eda.event.body }}"
+      var: hostvars[inventory_hostname]
+#      msg: "{{ ansible_eda.event.body }}"
