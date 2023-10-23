@@ -13,8 +13,8 @@
     ansible.builtin.debug:
       var: ansible_facts
 
-   - debug:
-        msg: |-
+  - debug:
+      msg: |-
           {% for k in _my_vars %}
           {{ k }}: {{ lookup('vars', k) }}
           {% endfor %}
