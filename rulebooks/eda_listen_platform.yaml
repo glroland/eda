@@ -18,4 +18,4 @@
           job_args: 
             extra_vars: 
               foo: "BAR"
-              eda_event_body: "{{ event.body }}"
+              eda_event_body: "{{ event }}"

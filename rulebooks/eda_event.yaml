@@ -11,8 +11,8 @@
     ansible.builtin.debug:
       var: ansible_facts
   
-  - debug:
-      msg: "{{ eda_event_body }}"
+#  - debug:
+#      msg: "{{ eda_event_body }}"
 #      msg: "{{ ansible_eda.event.body }}"
 
   - name: Print FOO
