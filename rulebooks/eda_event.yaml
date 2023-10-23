@@ -10,11 +10,15 @@
   - name: Print all available facts
     ansible.builtin.debug:
       var: ansible_facts
-  
-#  - debug:
-#      msg: "{{ eda_event_body }}"
-#      msg: "{{ ansible_eda.event.body }}"
+
+  - name: Print FOO
+    ansible.builtin.debug:
+        var: foo
 
   - name: Print FOO
     ansible.builtin.debug:
         var: eda_event_body
+
+  - name: Print FOO
+    ansible.builtin.debug:
+        var: event
