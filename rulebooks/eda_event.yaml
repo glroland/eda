@@ -17,6 +17,10 @@
 
   - name: Print FOO
     ansible.builtin.debug:
+        var: body
+
+  - name: Print FOO
+    ansible.builtin.debug:
         var: eda_event_body
 
   - name: Print FOO
