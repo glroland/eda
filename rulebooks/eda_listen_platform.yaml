@@ -19,3 +19,4 @@
             extra_vars: 
               foo: "BAR"
               eda_event_body: "{{ event }}"
+              body: event.body
