@@ -13,7 +13,7 @@
 
   - name: Print FOO
     ansible.builtin.debug:
-        msg: '{{ foo }}'
+        var: event
   
 #  - debug:
 #      msg: "{{ eda_event_body }}"
