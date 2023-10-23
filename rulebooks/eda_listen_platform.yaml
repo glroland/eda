@@ -15,3 +15,5 @@
         run_job_template:
           name: eda_event
           organization: Default
+          job_args: 
+            extra_vars: "{{ event.payload }}"
