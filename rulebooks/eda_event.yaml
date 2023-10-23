@@ -12,4 +12,5 @@
       var: ansible_facts
 
   - debug:
-      msg: "{{ ansible_eda.event.body }}"
+      msg: "{{ eda_event_body }}"
+#      msg: "{{ ansible_eda.event.body }}"
