@@ -16,4 +16,5 @@
           name: eda_event
           organization: Default
           job_args: 
-            extra_vars: "{{ event.body }}"
+            extra_vars: 
+              ansible_eda.event: "{{ event }}"
