@@ -17,4 +17,5 @@
           organization: Default
           job_args: 
             extra_vars: 
+              foo: "BAR"
               eda_event_body: "{{ event.body }}"
