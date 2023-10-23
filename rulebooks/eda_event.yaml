@@ -6,9 +6,10 @@
   tasks:
   - debug:
       var: hostvars[inventory_hostname]
-#  - debug:
-#      msg: "{{ ansible_eda.event.body }}"
 
   - name: Print all available facts
     ansible.builtin.debug:
       var: ansible_facts
+
+  - debug:
+      msg: "{{ ansible_eda.event.body }}"
