@@ -9,11 +9,12 @@
         offset: earliest
 
   rules:
-    - name: receive event and kickoff automation template
+
+    - name: receive event and kickoff automation workflow
       condition: event.body != ''
       action:
-        run_job_template:
-          name: eda_event
+        run_workflow_template:
+          name: eda_wf_event
           organization: Default
           job_args: 
             extra_vars: 
@@ -21,11 +22,11 @@
               eda_event_body: "{{ event }}"
               body: event.body
 
-    - name: receive event and kickoff automation workflow
+    - name: receive event and kickoff automation template
       condition: event.body != ''
       action:
-        run_workflow_template:
-          name: eda_wf_event
+        run_job_template:
+          name: eda_event
           organization: Default
           job_args: 
             extra_vars: 
