@@ -20,7 +20,7 @@
             extra_vars: 
               greeting: "WORLD!"
               eda_event_body: "{{ event }}"
-              body: event.body
+              body: "{{ event.body }}""
 
     - name: default event handler
       condition: event.body != ''
@@ -32,4 +32,4 @@
             extra_vars: 
               greeting: "BOOOOOH....."
               eda_event_body: "{{ event }}"
-              body: event.body
+              body: "{{ event.body }}""
