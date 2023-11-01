@@ -19,8 +19,6 @@
           job_args: 
             extra_vars: 
               greeting: "WORLD!"
-              eda_event_body: "{{ event }}"
-              body: "{{ event.body }}""
 
     - name: default event handler
       condition: event.body != ''
@@ -31,5 +29,3 @@
           job_args: 
             extra_vars: 
               greeting: "BOOOOOH....."
-              eda_event_body: "{{ event }}"
-              body: "{{ event.body }}""

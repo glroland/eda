@@ -15,18 +15,6 @@
     ansible.builtin.debug:
         var: greeting
 
-  - name: Print body
-    ansible.builtin.debug:
-        var: body
-
-  - name: Print eda_event_body
-    ansible.builtin.debug:
-        var: eda_event_body
-
-  - name: Print event
-    ansible.builtin.debug:
-        var: event
-
   - name: Print ansible_eda.event
     ansible.builtin.debug:
         var: ansible_eda.event
@@ -34,4 +22,3 @@
   - name: Print ansible_eda.event.body
     ansible.builtin.debug:
         var: ansible_eda.event.body
-
