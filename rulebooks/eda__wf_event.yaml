@@ -29,5 +29,5 @@
       extra_vars:
         var1: My First Variable
         var2: My Second Variable
-        ansible_eda: {{ ansible_eda }}
+        ansible_eda: "{{ ansible_eda }}"
       wait: False
