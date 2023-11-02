@@ -24,7 +24,7 @@
         var: ansible_eda.event.body
 
   - name: Launch a Workflow with extra_vars without waiting
-    tower_workflow_launch:
+    ansible.controller.tower_workflow_launch:
       workflow_template: "eda_wf"
       extra_vars:
         var1: My First Variable
