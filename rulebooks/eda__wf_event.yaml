@@ -26,6 +26,9 @@
   - name: Launch a Workflow with extra_vars without waiting
     ansible.controller.workflow_launch:
       workflow_template: "eda_wf"
+      tower_oauthtoken: "{{ tower_oauthtoken }}"
+      tower_host: "{{ tower_host }}"
+      validate_certs: "{{ validate_certs }}"
       extra_vars:
         var1: My First Variable
         var2: My Second Variable
